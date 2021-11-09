@@ -185,13 +185,10 @@ var eliminaUsuario = (conjuntoDatos,dni)=>{
                             conjuntoDatos.splice(i,1)
                             return conjuntoDatos;
                         } 
-               
             }
         }
     }
-    return encontrado;
-               
-    
+    return encontrado;   
 }
 
 while(salir==true){
