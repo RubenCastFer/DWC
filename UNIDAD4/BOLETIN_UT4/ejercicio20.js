@@ -5,11 +5,11 @@ var fin=10;
 var arrayDatos = [];
 
 while(salir==true){
-    contador++;
-    //var datos = prompt("introduzca, nombre, apellidos, DNI y fecha de nacimiento separado por comas.");
-    var datos = prueba; 
-    //if(datos==""){
-    if(contador==fin){
+    //contador++;
+    var datos = prompt("introduzca, nombre, apellidos, DNI y fecha de nacimiento separado por comas.");
+    //var datos = prueba; 
+    if(datos==""){
+    //if(contador==fin){
         salir=false;
     } else{
         arrayDatos.push(datos.split(","));

@@ -80,8 +80,9 @@ while(salir==true){
 console.log(arrayDatos)
 
 salir = true;
-do {
-    /*var realizar=prompt("Desea imprimir, buscar por apellido, buscar por dni o por edad: ")
+var continuar;
+while (salir==true) {
+    var realizar=prompt("Desea imprimir, buscar por apellido, buscar por dni o por edad: ")
 
     if(realizar.toUpperCase()=="IMPRIMIR"){
         arrayDatos.forEach(persona => {
@@ -91,7 +92,7 @@ do {
             document.write("</br>")
         });
     }else if(realizar.toUpperCase()=="APELLIDO"){
-        //apellidos
+        //apellido
         var apellido=prompt("Introduzca el apellido")
 
         var resultadoApellido = buscarApellidos(arrayDatos,apellido)
@@ -106,6 +107,13 @@ do {
         } else {
             document.write("No hay coincidencia con el apellido introducido")
         }
+        continuar=prompt("Desea terminar S/n");
+        if (continuar.toUpperCase()=="S") {
+            salir=false;
+        } else{
+            salir=true;
+        }
+
     }else if(realizar.toUpperCase()=="DNI"){
         //dni
         var dni=prompt("Introduzca el dni")
@@ -121,6 +129,12 @@ do {
             }
         } else {
             document.write("No hay coincidencia con el dni introducido")
+        }
+        continuar=prompt("Desea terminar S/n");
+        if (continuar.toUpperCase()=="S") {
+            salir=false;
+        } else{
+            salir=true;
         }
 
 
@@ -141,17 +155,23 @@ do {
         } else {
             document.write("No hay coincidencia con la edad introducido")
         }
+        continuar=prompt("Desea terminar S/n");
+        if (continuar.toUpperCase()=="S") {
+            salir=false;
+        } else{
+            salir=true;
+        }
 
-    } else{*/
-        var continuar=prompt("Desea terminar S/n");
-        if (continuar.toUpperCase=="S") {
+    } else{
+        continuar=prompt("Desea terminar S/n");
+        if (continuar.toUpperCase()=="S") {
             salir=false;
         } else{
             salir=true;
         }
         
-    //}
+    }
     
-} while (salir==true);
+} 
 
     
