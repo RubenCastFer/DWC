@@ -28,6 +28,13 @@ if (modulo.has("DAW")) {
 }
 
 var moduloAsc = new Map([...modulo.entries()].sort());
-for (let entrada of modulo) {
+for (let entrada of moduloAsc) {
     document.write(entrada+"</br>");
+}
+
+var clave = modulo.keys();
+var orden = [...clave].sort();
+
+for (let or of orden){
+    document.write(or+"<br>");
 }
