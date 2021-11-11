@@ -6,7 +6,7 @@ var arrayDatos = [];
 
 while(salir==true){
     //contador++;
-    var datos = prompt("introduzca, nombre, apellidos, DNI y fecha de nacimiento separado por comas.");
+    var datos = prompt("introduzca, nombre, apellido1, apellido2, DNI y fecha de nacimiento separado por comas.");
     //var datos = prueba; 
     if(datos==""){
     //if(contador==fin){
