@@ -1,11 +1,11 @@
 class Persona{
-    constructor(datos){ 
-        var arrayDatos=datos.split(",");
-        this.nombre=arrayDatos[0];
-        this.apellido1=arrayDatos[1];
-        this.apellido2=arrayDatos[2];
-        this.dni=arrayDatos[3];
-        this.fecha=arrayDatos[4];
+    constructor(nombre,apellido1,apellido2,dni,fecha){ 
+
+        this.nombre=nombre;
+        this.apellido1=apellido1;
+        this.apellido2=apellido2;
+        this.dni=dni;
+        this.fecha=fecha;
     };
 
     imprimirDatos(){
