@@ -48,9 +48,9 @@ class Aula{
 
     ordenarAlumnosApellidos(){
         return this.alumnos.sort((alumno1,alumno2)=>{
-            if (alumno1.apellido1<alumno2.apellido1){
+            if (alumno1.apellido1.toUpperCase()<alumno2.apellido1.toUpperCase()){
                 return 1;
-        } else if (alumno1.apellido1>alumno2.apellido1){
+        } else if (alumno1.apellido1.toUpperCase()>alumno2.apellido1.toUpperCase()){
                 return -1;
         }
         return 0;
