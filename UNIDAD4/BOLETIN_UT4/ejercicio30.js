@@ -27,7 +27,16 @@ var alumnos = new Array(alumno, alumno2, alumno3);
 
 var clase = new Aula(alumnos);
 
-//clase.imprimirAlumnos();
+clase.imprimirAlumnos();
 
 var resulBusqueda=clase.buscarAlumno("48963910s");
 resulBusqueda.imprimirAlumno();
+
+var notaOrdenada = clase.ordenarNotaAlumno("48963910s");
+for (const nota of notaOrdenada) {
+    document.write(nota);
+    document.write("<br>")
+}
+clase.ordenarAlumnosApellidos();
+
+clase.imprimirAlumnos();

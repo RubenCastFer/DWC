@@ -13,9 +13,11 @@ class Aula{
     };
 
     ordenarNotaAlumno(dni){
-        const notasOrdenadas = new Map();
-        var alumno=this.buscarAlumno(dni);
-        notasOrdenadas = [alumno.notas.entries()].sort();
+        var alumno = this.buscarAlumno(dni);
+        var mapOrdenado = new Map([...alumno.notas.entries()].sort((a,b) => b[1] - a[1]));
+        return mapOrdenado;
+        
+        
     
         /*
         const myMap = new Map();
@@ -45,7 +47,15 @@ class Aula{
     };
 
     ordenarAlumnosApellidos(){
-
+        return this.alumnos.sort((alumno1,alumno2)=>{
+            if (alumno1.apellido1<alumno2.apellido1){
+                return 1;
+        } else if (alumno1.apellido1>alumno2.apellido1){
+                return -1;
+        }
+        return 0;
+        });
+        
     };
 
     imprimirAlumnos(){
