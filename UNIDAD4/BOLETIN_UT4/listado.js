@@ -34,9 +34,10 @@ class Listado{
     eliminarBanda(nombre){
         var index = this.bandas.findIndex((banda)=> banda.nombre.toUpperCase()==nombre.toUpperCase());
         if (index!=-1) {
-            return this.bandas.splice(index-1,1);
+            this.bandas.splice(index,1);
+            return true
         }
-        return null;
+        return false;
 
     }
 

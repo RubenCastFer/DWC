@@ -40,6 +40,4 @@ ordenado.forEach(banda => {
 });*/
 
 var eliminado = listaEvento.eliminarBanda("Los manquitos")
-eliminado.forEach(banda => {
-    banda.mostrarBanda();
-});
+document.write(eliminado)
