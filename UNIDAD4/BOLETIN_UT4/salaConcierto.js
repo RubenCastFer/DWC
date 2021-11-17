@@ -24,12 +24,12 @@ var listaEvento = new Listado(bandas);
 
 //listaEvento.imprimirListadoBandas();
 
-/*var listaEncontrado=listaEvento.buscarBandaPorNombre("La tienda en casa")
+/*var listaEncontrado=listaEvento.buscarBandaPorNombre("La tienda en casa");
 listaEncontrado.forEach(banda => {
     banda.mostrarBanda();
 });*/
 
-/*var listaEncontrado=listaEvento.buscarBandaPorEstilo("Pop")
+/*var listaEncontrado=listaEvento.buscarBandaPorEstilo("Pop");
 listaEncontrado.forEach(banda => {
     banda.mostrarBanda();
 });*/
