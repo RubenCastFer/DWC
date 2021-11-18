@@ -1,8 +1,14 @@
+var piloto1 = new Piloto("Ruben","Ferrari");
+var piloto2 = new Piloto("Manue","Lotus");
+var piloto3 = new Piloto("Ale","Honda");
+var piloto4 = new Piloto("David","Mercedes");
+
+
 var sesionCalificacion = new Array();
-sesionCalificacion.push(["Ruben","Ferrari",(140/1000)]);
-sesionCalificacion.push(["Manue","Lotus",(160/1000)]);
-sesionCalificacion.push(["Ale","Honda",(230/1000)]);
-sesionCalificacion.push(["David","Mercedes",(120/1000)]);
+sesionCalificacion.push([piloto1,(14000)]);
+sesionCalificacion.push([piloto2,(16000)]);
+sesionCalificacion.push([piloto3,(23000)]);
+sesionCalificacion.push([piloto4,(12000)]);
 
 sesionCalificacion.forEach(element => {
     element.forEach(dato => {
