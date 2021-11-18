@@ -10,9 +10,7 @@ sesionCalificacion.push([piloto2,(16000)]);
 sesionCalificacion.push([piloto3,(23000)]);
 sesionCalificacion.push([piloto4,(12000)]);
 
-sesionCalificacion.forEach(element => {
-    element.forEach(dato => {
-        document.write(dato+" ");
-    });
+sesionCalificacion.forEach(elemento => {
+    document.write(elemento[0].nombre+""+elemento[0].escuderia);
     document.write("<br>")
 });
