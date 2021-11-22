@@ -30,6 +30,7 @@ var clase = new Aula(alumnos);
 clase.imprimirAlumnos();
 
 var resulBusqueda=clase.buscarAlumno("48963910s");
+//añadir if (de falso)
 resulBusqueda.imprimirAlumno();
 
 var notaOrdenada = clase.ordenarNotaAlumno("48963910s");

@@ -4,12 +4,19 @@ class Aula{
     };
 
     buscarAlumno(dni){
-        for(alumno of this.alumnos) {
+        /*for(alumno of this.alumnos) {
                 if(alumno.dni==dni){
                     return alumno;
                 }
         }
-        return false;
+        //cambiar por null
+        return false;*/
+
+        //return this.alumnos.filter((alumno) => alumno.dni==dni)[0];
+        
+        return this.alumnos.find((alumno) => alumno.dni==dni);
+    
+
     };
 
     ordenarNotaAlumno(dni){
