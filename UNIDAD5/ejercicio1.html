@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="ejercicio2.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <form action="javascript:iniciar()" name="registro" id="registro" method="POST">
+        <!-- Nombre y apellidos -->
+        <label for="name">Nombre</label><br>
+        <input type="text" id="name" placeholder="Nombre" pattern="[A-Za-z]*">
+        <input type="text" id="lastname" placeholder="Apellidos" pattern="[A-Za-z\s]*">
+        <br>
+        <br>
+
+        <!-- Nombre de usuario -->
+        <label for="username">Nombre de usuario</label><br>
+        <input type="text" id="username" placeholder="Nombre de usuario" pattern="[A-Za-z\s]*">
+        <br>
+        <br>
+
+        <!-- Contraseña -->
+        <label for="pass">Contraseña</label><br>
+        <input type="password" id="pass" pattern="[A-Za-z0-9!­*$%]*">
+        <br>
+        <br>
+
+        <!-- Confirmacion -->
+        <label for="passConf">Confirma tu contraseña</label><br>
+        <input type="password" id="passConf" pattern="[A-Za-z0-9!­*$%]*">
+        <br>
+        <br>
+
+        <!-- Fecha nacimiento -->
+        <label>Fecha de nacimiento</label><br>
+        <input type="date" id="date" name="date">
+        <br>
+        <br>
+
+        <!-- Seleccion de sexo -->
+        <label>Sexo</label><br>
+        <select id="sex" name="sex">
+            <option value="hombre">Hombre</option>
+            <option value="mujer">Mujer</option>
+            <option value="otro">Otro</option>
+        </select>
+        <br>
+        <br>
+
+        <!-- Telefono -->
+        <label>Teléfono móvil</label><br>
+        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}">
+        <br>
+        <br>
+
+        <!-- Mail -->
+        <label>Tu direccíon de correo electrónico actual</label><br>
+        <input type="email" id="email" name="email">
+        <br>
+        <br>
+
+        <!-- envio formulario -->
+        <button id="registro-ok" type="submit">Registrar</button>
+        <!--<input type="button" onclick="submit()" value="Enviar"/>-->
+
+    </form>
+</body>
+</html>
