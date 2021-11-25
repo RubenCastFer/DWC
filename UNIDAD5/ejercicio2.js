@@ -1,10 +1,12 @@
+window.addEventListener("load",iniciar)
+
 function iniciar() {
     const formulario = document.getElementById('registro');
-    formulario.addEventListener('submit', copiarDatos);
+    formulario.addEventListener('', copiarDatos);
 }
 
-function copiarDatos(event) {
-    event.preventDefault();
+function copiarDatos() {
+
     var name = (document.forms["registro"].name.value).toUpperCase();
     var lastname = (document.forms["registro"].lastname.value).toUpperCase();
     var username = (document.forms["registro"].username.value).toUpperCase();
