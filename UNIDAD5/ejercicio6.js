@@ -7,13 +7,14 @@ function iniciar() {
 
 var comprobar = () => {
     divN1=document.getElementById("n1");
-    var nombre= (document.forms["formulario"].nombreMa.value);
-    var nombreMayu=(document.forms["formulario"].nombreMa.value).toUpperCase();
+    var nombre= (document.getElementById("nombreMa").value);
+    var nombreMayu=(document.getElementById("nombreMa").value).toUpperCase();
     if (nombre=="") {
         divN1.innerHTML="CAMPO OBLIGATORIO";
     }else if (nombre==nombreMayu) {
         divN1.innerHTML="CORRECTO";
-        //redirigir a servidor.
+        document.getElementById("formulario").action = "mailto: ruben@gmail.com";
+        document.getElementById("formulario").submit();
     } else {
         divN1.innerHTML="ESCRIBA SU NOMBRE EN MAYUSCULA";
     }
