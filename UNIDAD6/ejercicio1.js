@@ -1,6 +1,10 @@
 window.addEventListener("load",añadir)
 
 function añadir(){
+    var h1 = document.createElement('h1');
+    var txt8 = document.createTextNode('texto');
+    h1.appendChild(txt8);
+
     var title = document.createElement('title');
     var txt1 = document.createTextNode('texto');
     title.appendChild(txt1);
@@ -27,9 +31,9 @@ function añadir(){
 
     var txt7 = document.createTextNode('text');
     p1.appendChild(txt7);
-    
 
-    document.body.appendChild(p1);
-    document.body.appendChild(h1);
     document.head.appendChild(title);
+    document.body.appendChild(h1);
+    document.body.appendChild(p1);
+
 }

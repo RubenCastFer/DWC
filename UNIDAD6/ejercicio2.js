@@ -15,7 +15,5 @@ function añadir(){
     var txt3 = document.createTextNode(' de mi párrafo');
     para.appendChild(txt3);
 
-    
-
     document.getElementById('testdiv').appendChild(para);
 }
