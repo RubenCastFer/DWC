@@ -1,7 +1,8 @@
 window.addEventListener("load",tabla)
 
-function tabla() {
+//añadir el mostrar y el ocultar.
 
+function tabla() {
 
     var tabla = document.createElement('table');
     for (let i = 0; i < 20; i++) {
