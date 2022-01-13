@@ -39,7 +39,5 @@ function get_fortune() {
     enfasis.appendChild(txt4);
 
     raiz.appendChild(enfasis);
-
-
 }
     

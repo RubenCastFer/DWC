@@ -17,4 +17,6 @@ function tabla() {
     }
     document.body.appendChild(tabla);
     tabla.setAttribute("border","1px");
+
+
 }
