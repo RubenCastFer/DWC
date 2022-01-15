@@ -1,4 +1,10 @@
-window.addEventListener("load",cuerpo)
+window.addEventListener("load",iniciar)
+
+function iniciar(){
+    cuerpo();
+    desplegable();
+}
+
 
 function cuerpo(){
 
@@ -21,7 +27,7 @@ function cuerpo(){
 
     for(var i=0; i<json.length; i++){
         var li=document.createElement("li");
-        var img=document.createElement("img");
+        var img=document.createElement('img');
         img.setAttribute("src",json[i]["src"]);
         li.appendChild(img);
 
@@ -45,4 +51,27 @@ function cuerpo(){
         ul.appendChild(li);
     }
 
+}
+
+function desplegable (){
+    var fotos = document.getElementsByTagName('img');
+
+    for (let i = 0; i<fotos.length; i++){
+        fotos[i].addEventListener('click', ocultarMostrar);
+    }
+}
+
+function ocultarMostrar(){
+    
+    if (this.nextSibling.style.visibility=="hidden") {
+        visible="visible";
+    } else{
+        visible="hidden";
+    }
+
+    var padre = this.parentNode;
+    var arrayHijos = padre.childNodes;
+    for(let z= 1; z<arrayHijos.length; z++){
+        arrayHijos[z].style.visibility=visible;
+    }
 }
