@@ -1,10 +1,5 @@
-window.addEventListener("load",iniciar);
+window.addEventListener("load",desplegableTitulo);
 
-function iniciar(){
-    desplegableTitulo();
-    
-
-}
 
 function cuerpo(){
     arrayJuguetes = [	{	img:"https://juguettos.com/1361787-large_default/A0041951.jpg", 
@@ -102,11 +97,14 @@ function ocultarMostrar(){
     }
 }
 function ocultarMostrarTitulo(){
-    var ocultar=document.getElementsByTagName('div')
+    var ocultar=document.getElementsByTagName('div');
+    var titulo = document.getElementsByTagName('h1')[0];
     if (ocultar[0]==undefined) {
+        titulo.firstChild.nodeValue="Ocultar";
         cuerpo();
         desplegable();
     }else{
+        titulo.firstChild.nodeValue="Mostrar";
         ocultar[0].remove();
     }
 }
