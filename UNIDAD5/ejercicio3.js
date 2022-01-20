@@ -44,36 +44,47 @@ function copiarDatos() {
 function mostrarEdad(){
     var años=calcularEdad(document.getElementById('date').value);
     var edad=document.getElementById("edad");
+    var cuadroEdad=document.getElementById("edad");
+    cuadroEdad.value=años;
+    var error=document.getElementById("error");
 
 
     if (años<18) {
-        var parra=document.createElement("p");
-        parra.setAttribute("id","edadAños");
-        var text=document.createTextNode(años);
-        parra.appendChild(text);
-        edad.appendChild(parra);
-
-        var errorDiv=document.createElement("div");
-        errorDiv.setAttribute("id","error");
         var textError=document.createTextNode("No puede ser menor de 18 años");
-        edad.appendChild(errorDiv);
-        errorDiv.appendChild(textError);
+        error.appendChild(textError);
 
     }else{
-        edad.removeChild(document.getElementById("error"));
-        edad.removeChild(document.getElementById("edadAños"));
-
-        var parra=document.createElement("p");
-        parra.setAttribute("id","edadAños");
-
-        var text=document.createTextNode(años);
-        parra.appendChild(text);
-        edad.appendChild(parra);
-
+        if (error.nodeValue==null) {
+            mostrarSelect();
+        }else{
+            error.firstChild.remove();
+            mostrarSelect();
+            
+        }
     }
 }
 
+function mostrarSelect(){
+    var label=document.createElement("label");
+    label.setAttribute("for","modulos");
+    label.appendChild(document.createElement("br"));
+    label.appendChild(document.createTextNode("Modulos"));
+    label.appendChild(document.createElement("br"));
+    document.getElementById("error").parentElement.insertBefore(label,document.getElementById("error"));
 
+    var select = document.createElement("select");
+    select.setAttribute("name","modulos");
+    select.setAttribute("id","modulos");
+    document.getElementById("error").parentElement.insertBefore(select,label.nextSibling);
+
+    var array=["smr","daw","asi"];
+    array.forEach(element => {
+        var option = document.createElement("option");
+        option.setAttribute("value",element);
+        option.appendChild(document.createTextNode(element));
+        select.appendChild(option);
+    });
+}
 
 function calcularEdad(fecha) {
     var hoy = new Date();
