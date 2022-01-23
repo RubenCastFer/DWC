@@ -39,6 +39,8 @@ function copiarDatos() {
     nuevaVentana.document.write(sex + "<br>");
     nuevaVentana.document.write(telefono + "<br>");
     nuevaVentana.document.write(email + "<br>");
+
+    confirmarContrasenya()
 }
 
 function mostrarEdad(){
@@ -97,4 +99,26 @@ function calcularEdad(fecha) {
     }
 
     return edad;
+}
+
+function checkPasswordVal(password, passwordConfirm) {
+    var validator = false;
+    if (password == passwordConfirm) {
+        validator = true;
+    }
+    return validator;
+}
+
+function confirmarContrasenya() {
+    var password = document.forms["register"].password.value;
+    var passwordConfirm = document.forms["register"].passwordConfirm.value;
+    var validator = false;
+    document.getElementById("register").action = "mailto:" + document.forms["register"].email.value; 
+    if (password == passwordConfirm) {
+        document.getElementById("errorPassword").innerHTML = "<p style='color:green'>Las contraseñas coinciden.</p>";
+        validator = true;
+    } else {
+        document.getElementById("errorPassword").innerHTML = "<p style='color:red'>Las contraseñas no coinciden.</p>";
+    }
+    return validator;
 }
