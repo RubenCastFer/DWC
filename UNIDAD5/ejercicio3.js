@@ -7,6 +7,10 @@ function iniciar() {
     const formulario2 = document.getElementById('date');
     formulario2.addEventListener('blur', mostrarEdad);
 
+
+    const formulario3 = document.getElementById('passConf');
+    formulario3.addEventListener('blur', confirmarContrasenya);
+
 }
 
 function copiarDatos() {
@@ -110,10 +114,10 @@ function checkPasswordVal(password, passwordConfirm) {
 }
 
 function confirmarContrasenya() {
-    var password = document.forms["register"].password.value;
-    var passwordConfirm = document.forms["register"].passwordConfirm.value;
+    var password = document.forms["registro"].pass.value;
+    var passwordConfirm = document.forms["registro"].passConf.value;
     var validator = false;
-    document.getElementById("register").action = "mailto:" + document.forms["register"].email.value; 
+    document.getElementById("registro").action = "mailto:" + document.forms["registro"].email.value; 
     if (password == passwordConfirm) {
         document.getElementById("errorPassword").innerHTML = "<p style='color:green'>Las contraseñas coinciden.</p>";
         validator = true;
