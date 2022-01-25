@@ -61,6 +61,7 @@ function mostrarEdad(){
 
     }else{
         if (error.nodeValue==null) {
+            error.firstChild.remove();
             mostrarSelect();
         }else{
             error.firstChild.remove();
