@@ -1,9 +1,11 @@
 $(function(){
 
-  $("#ocultar").click(function(){
-    $("div").children("button").nextAll().hide();
-  });
   $("button").click(function(){
-    $("div").children("button").nextAll().show();
+    $(this).nextAll().toggle();
+    if ($(this).text()=="hide") {
+      $(this).text("show");
+    }else{
+      $(this).text("hide");
+    }
   });
 });
