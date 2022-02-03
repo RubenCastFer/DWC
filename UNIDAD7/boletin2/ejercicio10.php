@@ -1,5 +1,7 @@
 <?php
-$miArray=["valor1"=>"hola mundo"];
-echo json_encode($miArray); 
+$nombre = $_POST["nombre"];
+$apellido = $_POST["apellido"];
+
+echo  $nombre." ".$apellido; 
 ?>
 
