@@ -36,9 +36,19 @@ $(function () {
                     $(this).siblings("p").slideDown("slow").delay(5000);},
                 function(){
                     $(this).siblings("p").slideUp("slow");
-              });
-        }
+            });
 
+            $("p").click(function(){
+                $(this).nextAll().toggle();
+            });
+
+            $("li").dblclick(function(){
+                if ($(this).parent().attr("class")=="specs") {
+                    $(this).toggleClass("destacada");
+                }
+            });
+
+        }
         
     });
     // });
