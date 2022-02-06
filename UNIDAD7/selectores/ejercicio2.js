@@ -18,7 +18,7 @@ $(document).ready(function () {
     //i
     $("[href$='.html']").css("background-color", "blue");
     //j
-    // $("ul:eq(1)>li>ul>li:last-child").css("background-color", "blue");
+    $("ul:eq(1)>li>ul>li:last-child").css("background-color", "blue");
     $("li").children().children(":contains('hora')").css("background-color", "blue");
     //k
     $(":empty").text("nodo vacio");
