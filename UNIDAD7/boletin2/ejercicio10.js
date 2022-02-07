@@ -9,8 +9,8 @@ $(function(){
         var valorApellido=$("#apellido").val();
     
         var parametros = {
-            valorNombre: valorNombre,
-            valorApellido: valorApellido
+            nombre: valorNombre,
+            apellido: valorApellido
     
         };
         $.ajax({
