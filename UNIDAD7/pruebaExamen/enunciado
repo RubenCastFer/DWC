@@ -1,0 +1,49 @@
+A. La página inicial contendrá un formulario con un cajetín de texto para filtrar los anuncios. Al enviar el formulario
+(método POST), el script pedirá mediante Ajax los datos del servidor, enviando el parámetro anuncio. Si este parámetro
+está vacío, el servidor responde con todos los anuncios, sino con los anuncios seleccionados (Esto está desarrollado en
+el archivo PHP adjunto. El formato de los datos enviados por el servidor es JSON.
+
+Los anuncios deben cargarse cada vez que se hace click en el botón “Buscar”.
+
+Implementar las funciones que crean la lista de anuncios, como se puede apreciar en el siguiente ejemplo, (campos
+destacados en negrita). Las imágenes deben tener una anchura y altura de 150px que debes fijar mediante JQuery:
+
+<div class="x1">
+    <div class="x2">
+        <div class="x3">OFERTA</div>
+        <div class="x4">Accesorios para motos (SEVILLA)</div>
+        <div class="x5">148253963 </div>
+        <div class="x6">15 horas</div>
+    </div>
+    <div class="x7">
+        <a href="/accesorios-para-motos/c … -gris-ref-462-148253963.htm" target="_blank" class="cti">
+            CASCO MODULAR GIVI GRIS REF. 462
+        </a>
+        <br>
+        <div class="tx">
+            Casco modular givi gris … estrenar p. v. p. 299 euros y los tenemos en oferta en 159 euros
+        </div>
+        <br>
+        <div class="x11">
+            <div class="pr">159€</div>
+            <div class="vembox">
+                <a href="javascript:cpr(1)">
+                    <div class="vem pro">profesional</div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <div id="148253963" class="x8">
+        <img src="http://91.229.239.12/...-gris-ref.462-148253963_1.jpg">
+        <br>
+        <div class="x12">2 FOTOS</div>
+    </div>
+</div>
+</div>
+
+B. Modificar lo necesario en el código para que al hacer click encima de una de las imágenes se añada sobre el texto del
+precio perteneciente a esa imagen la clase “destacado” y al volver a hacer click se elimine la clase “destacado”.
+
+C. Modificar lo necesario en el código para que al hacer doble click en el texto OFERTA se oculte todo el anuncio menos
+el texto “OFERTA” y cuando se vuelva a hacer doble click, se vuelva a mostrar.
